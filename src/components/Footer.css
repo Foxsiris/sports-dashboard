@@ -1,0 +1,15 @@
+.footer { border-top: 1px solid var(--border); background: rgba(7, 8, 13, 0.6); }
+.footer__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer__inner a { color: var(--text); border-bottom: 1px dashed var(--border-strong); }
+.footer__inner a:hover { color: var(--cs2); border-color: var(--cs2); }
+.footer__small { color: var(--text-mute); font-size: 12px; }

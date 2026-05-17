@@ -1,0 +1,50 @@
+.card__wrap { display: block; text-decoration: none; color: inherit; }
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-elev) 100%);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  height: 100%;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  opacity: 0.6;
+}
+.card--cs2::before { background: linear-gradient(90deg, transparent, var(--cs2), transparent); }
+.card--f1::before { background: linear-gradient(90deg, transparent, var(--f1), transparent); }
+.card--ufc::before { background: linear-gradient(90deg, transparent, var(--ufc), transparent); }
+.card__wrap:hover .card { transform: translateY(-2px); border-color: var(--border-strong); }
+.card--cs2:hover { box-shadow: 0 8px 30px -10px var(--cs2-glow); }
+.card--f1:hover { box-shadow: 0 8px 30px -10px var(--f1-glow); }
+.card--ufc:hover { box-shadow: 0 8px 30px -10px var(--ufc-glow); }
+.card--past { opacity: 0.55; }
+.card__top { display: flex; justify-content: space-between; align-items: center; gap: 8px; min-height: 22px; }
+.card__badge {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+  color: var(--text-dim); padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border); border-radius: 4px;
+}
+.card__countdown { font-size: 11px; font-weight: 600; letter-spacing: 0.3px; padding: 4px 8px; border-radius: 4px; white-space: nowrap; }
+.card__countdown--cs2 { background: rgba(0, 255, 136, 0.1); color: var(--cs2); }
+.card__countdown--f1 { background: rgba(255, 87, 34, 0.12); color: var(--f1); }
+.card__countdown--ufc { background: rgba(255, 45, 85, 0.12); color: var(--ufc); }
+.card__countdown--past { background: rgba(255, 255, 255, 0.04); color: var(--text-mute); }
+.card__title { font-size: 16px; font-weight: 600; line-height: 1.35; color: var(--text); letter-spacing: -0.1px; }
+.card__subtitle { font-size: 13px; color: var(--text-dim); line-height: 1.4; }
+.card__meta { display: flex; flex-direction: column; gap: 6px; margin-top: auto; padding-top: 8px; }
+.card__row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-dim); }
+.card__icon { font-size: 13px; width: 16px; text-align: center; opacity: 0.85; }
+.card__footer { padding-top: 10px; border-top: 1px solid var(--border); margin-top: 4px; }
+.card__link { font-size: 12px; font-weight: 500; color: var(--text-dim); transition: color 0.15s ease; }
+.card--cs2:hover .card__link { color: var(--cs2); }
+.card--f1:hover .card__link { color: var(--f1); }
+.card--ufc:hover .card__link { color: var(--ufc); }
